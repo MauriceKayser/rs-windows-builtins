@@ -1,0 +1,14 @@
+[package]
+name = "windows-builtins-no-std"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+builtins = { path = "builtins" }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+debug = true
+panic = "abort"
